@@ -6,6 +6,42 @@
     <title>Shashank Kanangi | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background: #1e1e1e;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        a {
+            color: #4db8ff;
+            text-decoration: none;
+        }
+        .project-card {
+            background: #222;
+            padding: 15px;
+            margin: 10px auto;
+            width: 80%;
+            border-radius: 5px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,5 +86,19 @@
         <p>Email: shashank@example.com</p>
         <p><a href="http://www.linkedin.com/in/shashankkanangi" target="_blank">LinkedIn</a> | <a href="https://github.com/shashank274" target="_blank">GitHub</a></p>
     </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll("nav ul li a");
+            links.forEach(link => {
+                link.addEventListener("mouseover", () => {
+                    link.style.color = "#ffcc00";
+                });
+                link.addEventListener("mouseout", () => {
+                    link.style.color = "#4db8ff";
+                });
+            });
+        });
+    </script>
 </body>
 </html>
